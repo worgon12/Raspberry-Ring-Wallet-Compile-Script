@@ -64,7 +64,8 @@ echo "${BLUE}Install Openssl${NC}"
 git clone https://github.com/openssl/openssl.git
 cd openssl
 git checkout OpenSSL_1_1_0-stable
-sudo ./configmake depend
+sudo ./config
+make depend
 sudo make
 sudo make install
 cd ..
