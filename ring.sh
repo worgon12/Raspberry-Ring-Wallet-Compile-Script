@@ -74,6 +74,6 @@ echo "${BLUE}Starting Compile for Pi4${NC}"
 sudo make -j4
 echo "${GREEN}done${NC}"
 echo "${GREEN}finish${NC}"
-echo "${GREEN}Start the Wallet over VNC with Ring.qt on Desktop${NC}"
+echo "${GREEN}Start the Wallet over VNC with ./Ring-qt on Desktop${NC}"
 sleep 10
 exit 0
