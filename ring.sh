@@ -60,21 +60,10 @@ sleep 5
 sudo ./configure --disable-util-wallet --disable-util-tx --disable-bench --disable-tests --disable-gui-tests --with-gui=qt5
 echo "${GREEN}done"
 sleep 5
-echo "${BLUE}Install Openssl${NC}"
-git clone https://github.com/openssl/openssl.git
-cd openssl
-git checkout OpenSSL_1_1_0-stable
-sudo ./config
-make depend
-sudo make
-sudo make install
-cd ..
-echo "${GREEN}done${NC}"
-sleep 5
 echo "${BLUE}Starting Compile for Pi4${NC}"
 sudo make -j4
 echo "${GREEN}done${NC}"
 echo "${GREEN}finish${NC}"
 echo "${GREEN}Start the Wallet over VNC with ./Ring-qt on Desktop${NC}"
 sleep 10
-exit 0
+exit 0 
