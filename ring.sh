@@ -14,7 +14,7 @@ sleep 5
 echo "${BLUE}System Update and dependencies install!${NC}"
 sleep 5
 sudo apt update -y
-sudo apt-get install build-essential libprotobuf-dev libcrypto++-dev autoconf qt5-default libtool autotools-dev automake bison pkg-config bsdmainutils libxkbcommon-dev python3 libevent-dev libglib2.0-dev libboost-system-dev libraspberrypi-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev libssl1.0-dev libssl-devlibdb++-dev libboost-all-dev libminiupnpc-dev libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev cmake curl g++-multilib binutils-gold -y
+sudo apt install make automake build-essential libprotobuf-dev libcrypto++-dev autoconf qt5-default libtool autotools-dev automake bison pkg-config bsdmainutils libxkbcommon-dev python3 libevent-dev libglib2.0-dev libboost-system-dev libraspberrypi-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libgmp-dev libboost-thread-dev libssl1.0-dev libssl-dev libdb++-dev libboost-all-dev libminiupnpc-dev libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev cmake qt5-qmake curl libzip-dev g++-multilib binutils-gold ntp git curl -y
 wget http://download.oracle.com/berkeley-db/db-4.8.30.zip
 unzip db-4.8.30.zip 
 cd db-4.8.30
