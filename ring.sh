@@ -14,7 +14,7 @@ sleep 5
 echo "${BLUE}System Update and dependencies install!${NC}"
 sleep 5
 sudo apt update -y
-sudo apt install make automake build-essential libprotobuf-dev libcrypto++-dev autoconf qt5-default libtool autotools-dev automake bison pkg-config bsdmainutils libxkbcommon-dev python3 libevent-dev libglib2.0-dev libboost-system-dev libraspberrypi-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libgmp-dev libboost-thread-dev libssl1.0-dev libssl-dev libdb++-dev libboost-all-dev libminiupnpc-dev libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev cmake qt5-qmake curl libzip-dev g++-multilib binutils-gold ntp git curl -y
+sudo apt-get install build-essential libprotobuf-dev libcrypto++-dev autoconf qt5-default libtool autotools-dev automake bison pkg-config bsdmainutils libxkbcommon-dev python3 libevent-dev libglib2.0-dev libboost-system-dev libraspberrypi-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev libssl1.0-dev libboost-all-dev libminiupnpc-dev libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqrencode-dev cmake curl git cmake -y
 wget http://download.oracle.com/berkeley-db/db-4.8.30.zip
 unzip db-4.8.30.zip 
 cd db-4.8.30
@@ -25,15 +25,6 @@ make install
 cd ..
 cd ..
 sleep 5
-echo "${BLUE}Install Openssl${NC}"
-git clone https://github.com/openssl/openssl.git
-cd openssl
-git checkout OpenSSL_1_1_0-stable
-sudo ./config
-make depend
-sudo make
-sudo make install
-cd ..
 git clone https://github.com/litecoincash-project/ring.git
 cd ring
 
@@ -64,6 +55,6 @@ echo "${BLUE}Starting Compile for Pi4${NC}"
 sudo make -j4
 echo "${GREEN}done${NC}"
 echo "${GREEN}finish${NC}"
-echo "${GREEN}Start the Wallet over VNC with Ring.qt on Desktop${NC}"
+echo "${GREEN}Start the Wallet over VNC with ./Ring-qt on Desktop${NC}"
 sleep 10
 exit 0
